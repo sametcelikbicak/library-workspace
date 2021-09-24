@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "build:lib":"ng build auto-focus",
+    "pack:lib":"cd dist/auto-focus && npm pack",
+    "build-and-pack":"npm run build:lib && npm run pack:lib"
   },
   "private": true,
   "dependencies": {
