@@ -7,7 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "build:lib":"ng build auto-focus",
+    "build:lib":"ng build auto-focus --configuration production",
     "pack:lib":"cd dist/auto-focus && npm pack",
     "build-and-pack":"npm run build:lib && npm run pack:lib"
   },
