@@ -45,6 +45,126 @@
           }
         }
       }
+    },
+    "library-test": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/library-test",
+      "sourceRoot": "projects/library-test/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/library-test",
+            "index": "projects/library-test/src/index.html",
+            "main": "projects/library-test/src/main.ts",
+            "polyfills": "projects/library-test/src/polyfills.ts",
+            "tsConfig": "projects/library-test/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/library-test/src/favicon.ico",
+              "projects/library-test/src/assets"
+            ],
+            "styles": [
+              "projects/library-test/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/library-test/src/environments/environment.ts",
+                  "with": "projects/library-test/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "library-test:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "library-test:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "library-test:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/library-test/src/test.ts",
+            "polyfills": "projects/library-test/src/polyfills.ts",
+            "tsConfig": "projects/library-test/tsconfig.spec.json",
+            "karmaConfig": "projects/library-test/karma.conf.js",
+            "assets": [
+              "projects/library-test/src/favicon.ico",
+              "projects/library-test/src/assets"
+            ],
+            "styles": [
+              "projects/library-test/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/library-test/tsconfig.app.json",
+              "projects/library-test/tsconfig.spec.json",
+              "projects/library-test/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/library-test/e2e/protractor.conf.js",
+            "devServerTarget": "library-test:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "library-test:serve:production"
+            }
+          }
+        }
+      }
     }
   },
   "defaultProject": "auto-focus"

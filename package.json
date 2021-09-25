@@ -5,11 +5,12 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
+    "library-test": "ng test library-test --browsers ChromeHeadless --watch=false",
     "lint": "ng lint",
-    "build:lib":"ng build auto-focus --configuration production",
-    "pack:lib":"cd dist/auto-focus && npm pack",
-    "build-and-pack":"npm run build:lib && npm run pack:lib"
+    "build:lib": "ng build auto-focus --configuration production",
+    "pack:lib": "cd dist/auto-focus && npm pack",
+    "build-and-pack": "npm run build:lib && npm run pack:lib",
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +22,7 @@
     "@angular/platform-browser": "~11.2.10",
     "@angular/platform-browser-dynamic": "~11.2.10",
     "@angular/router": "~11.2.10",
+    "@sametcelikbicak/auto-focus": "0.0.6",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
