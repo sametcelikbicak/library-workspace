@@ -1,11 +1,33 @@
 {
   "name": "@sametcelikbicak/auto-focus",
   "version": "0.0.3",
+  "description": "Auto focus directive for Angular projects",
   "peerDependencies": {
     "@angular/common": "^11.2.14",
     "@angular/core": "^11.2.14"
   },
   "dependencies": {
     "tslib": "^2.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sametcelikbicak/library-workspace.git"
+  },
+  "keywords": [
+    "auto",
+    "focus",
+    "auto focus",
+    "auto-focus",
+    "angular",
+    "frontend",
+    "front end",
+    "front-end",
+    "ngx"
+  ],
+  "author": "Samet ÇELİKBIÇAK",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sametcelikbicak/library-workspace/issues"
+  },
+  "homepage": "https://github.com/sametcelikbicak/library-workspace/blob/main/projects/auto-focus#README"
 }
