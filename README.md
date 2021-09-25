@@ -1,10 +1,6 @@
 # Library Workspace
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
-
-
-## [Auto Focus package](#projects/auto-focus/README.md)
-
+This  project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
 
 ### Development server
 
