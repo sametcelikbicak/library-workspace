@@ -1,6 +1,6 @@
 {
   "name": "@sametcelikbicak/auto-focus",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Auto focus directive for Angular projects",
   "peerDependencies": {
     "@angular/common": "^11.2.14",
