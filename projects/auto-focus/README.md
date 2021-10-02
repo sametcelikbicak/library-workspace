@@ -1,6 +1,11 @@
+<div align="center">
+
+ <img src="../../assets/auto-focus.svg" alt="Logo" width="256" height="256">
+
 # Auto Focus
 
-Auto focus directive for Angular projects
+Auto focus directive for Angular projects. You can easily focus your input by using `ngxAutoFocus` directive.
+</div>
 
 ## Installation
 
