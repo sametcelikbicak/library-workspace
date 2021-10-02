@@ -1,6 +1,6 @@
 <div align="center">
 
- <img src="../../assets/auto-focus.svg" alt="Logo" width="256" height="256">
+ <img src="assets/auto-focus.svg" alt="Logo" width="256" height="256">
 
 # Auto Focus
 
